@@ -6,17 +6,21 @@
 
 <h1>Todos</h1>
 
-<form method="POST">
+<form method="POST" action="?/create">
 	<label for="description">
-		add a todo:
-		<input type="text" name="description" id="description" value="" />
+		Add todo:
+		<input type="text" name="description" id="description" value="" placeholder="task" />
 	</label>
 </form>
 
 <ul>
 	{#each data.todos as todo (todo.id)}
 		<li class="todo">
-			{todo.description}
+			<form method="POST" action="?/delete">
+				<input type="hidden" name="id" value={todo.id} />
+				<button aria-label="Mark as complete">X</button>
+				{todo.description}
+			</form>
 		</li>
 	{/each}
 </ul>
