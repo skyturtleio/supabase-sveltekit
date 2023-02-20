@@ -8,7 +8,7 @@ interface Todo {
 
 const db = new Map();
 
-export function getTodos(userid: string) {
+export function getTodos(userid: string | undefined) {
   return db.get(userid);
 }
 
