@@ -10,7 +10,7 @@
 				<a href="/blog">Blog</a>
 			</li>
 			<li>
-				<a href="/contact">Contact</a>
+				<a href="/todos">Todos</a>
 			</li>
 		</ul>
 	</nav>
@@ -26,14 +26,14 @@
 	}
 
 	ul {
-	margin: 0;
-	list-style-type: none;
-	display: flex;
-	gap: 1rem;
+		margin: 0;
+		list-style-type: none;
+		display: flex;
+		gap: 1rem;
 	}
 
 	a {
-	text-decoration: none;
-	color: inherit;
+		text-decoration: none;
+		color: inherit;
 	}
 </style>
