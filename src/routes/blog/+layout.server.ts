@@ -1,4 +1,4 @@
-import type { PageServerLoad } from "./$types";
+import type { LayoutServerLoad } from "./$types";
 import { posts } from "./data";
 
 export const load = (({ params }) => {
@@ -8,4 +8,4 @@ export const load = (({ params }) => {
 			title: post.title,
 		})),
 	};
-}) satisfies PageServerLoad;
+}) satisfies LayoutServerLoad;
