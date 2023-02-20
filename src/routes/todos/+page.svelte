@@ -2,14 +2,26 @@
 	import type { PageServerData } from './$types';
 
 	export let data: PageServerData;
+	export let form;
 </script>
 
 <h1>Todos</h1>
 
+{#if form?.error}
+	<p class="error">{form.error}</p>
+{/if}
+
 <form method="POST" action="?/create">
 	<label for="description">
 		Add todo:
-		<input type="text" name="description" id="description" value="" placeholder="task" />
+		<input
+			type="text"
+			name="description"
+			id="description"
+			value={form?.description ?? ''}
+			placeholder="task"
+			required
+		/>
 	</label>
 </form>
 

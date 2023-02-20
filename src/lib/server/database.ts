@@ -13,11 +13,19 @@ export function getTodos(userid: string | undefined) {
 }
 
 export function createTodo(userid: string, description: string) {
+  if (description === "") {
+    throw new Error("todo must have description");
+  }
+
   if (!db.has(userid)) {
     db.set(userid, []);
   }
 
   const todos: Todo[] = db.get(userid);
+
+  if (todos.find((todo) => todo.description === description)) {
+    throw new Error("todos must be unique");
+  }
 
   todos.push({
     id: crypto.randomUUID(),

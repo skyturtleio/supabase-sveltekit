@@ -1,5 +1,6 @@
 import type { Actions, PageServerLoad } from "./$types";
 import * as db from "$lib/server/database";
+import { fail } from "@sveltejs/kit";
 
 export const load = (({ cookies }) => {
   const id = cookies.get("userid");
@@ -16,7 +17,14 @@ export const load = (({ cookies }) => {
 export const actions = {
   create: async ({ cookies, request }) => {
     const data = await request.formData();
-    db.createTodo(cookies.get("userid"), data.get("description"));
+    try {
+      db.createTodo(cookies.get("userid"), data.get("description"));
+    } catch (error) {
+      return fail(422, {
+        description: data.get("description"),
+        error: error.message,
+      });
+    }
   },
 
   delete: async ({ cookies, request }) => {
