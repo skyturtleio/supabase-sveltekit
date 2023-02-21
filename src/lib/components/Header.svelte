@@ -12,6 +12,9 @@
 			<li>
 				<a href="/todos">Todos</a>
 			</li>
+			<li>
+				<a href="/roll">Roll</a>
+			</li>
 		</ul>
 	</nav>
 </header>
