@@ -5,6 +5,10 @@
 	export let form;
 </script>
 
+<svelte:head>
+	<title>Todo List</title>
+</svelte:head>
+
 <h1>Todos</h1>
 
 {#if form?.error}
