@@ -10,6 +10,9 @@
 				<a href="/blog">Blog</a>
 			</li>
 			<li>
+				<a href="/errors">Errors</a>
+			</li>
+			<li>
 				<a href="/todos">Todos</a>
 			</li>
 			<li>

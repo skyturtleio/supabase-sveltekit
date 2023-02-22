@@ -7,6 +7,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Roll</title>
+</svelte:head>
+
 <button on:click={roll}> Roll the dice</button>
 
 {#if number !== undefined}
