@@ -13,6 +13,9 @@
 				<a href="/errors">Errors</a>
 			</li>
 			<li>
+				<a href="/redirects">Redirects</a>
+			</li>
+			<li>
 				<a href="/todos">Todos</a>
 			</li>
 			<li>
