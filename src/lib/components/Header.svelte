@@ -10,6 +10,12 @@
 				<a href="/blog">Blog</a>
 			</li>
 			<li>
+				<a href="/envvars">Envs</a>
+			</li>
+			<li>
+				<a href="/envvars/welcome">Welcome</a>
+			</li>
+			<li>
 				<a href="/errors">Errors</a>
 			</li>
 			<li>
