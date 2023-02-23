@@ -40,7 +40,7 @@ jobs:
           run_install: true
 
       - name: Build site
-        run: pnpm build
+        run: pnpm -r dotenv/config build
 
       - name: Deploy to Deno Deploy
         uses: denoland/deployctl@v1
