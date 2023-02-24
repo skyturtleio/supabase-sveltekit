@@ -1,6 +1,6 @@
 import type { PageServerLoad } from "./$types";
 import { fail, redirect } from "@sveltejs/kit";
-import { PASSPHRASE } from "$env/dynamic/private";
+import { env } from "$env/dynamic/private";
 
 export const load: PageServerLoad = ({ cookies }) => {
   if (cookies.get("allowed")) {
@@ -12,7 +12,7 @@ export const actions = {
   default: async ({ request, cookies }) => {
     const data = await request.formData();
 
-    if (data.get("passphrase") === PASSPHRASE) {
+    if (data.get("passphrase") === env.PASSPHRASE) {
       cookies.set("allowed", "true", {
         path: "/",
       });
